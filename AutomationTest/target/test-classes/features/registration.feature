@@ -26,10 +26,11 @@ Feature: Student Registration Form
     And the user clicks the close button
 
     Examples:
-      | firstName | lastName | email                 | phoneNumber | homeAddress | gender |
-      | Oyin      | Odukudu  | oyinodukudu@gmail.com | 0746473647  | Glasgow, UK | Female |
-      | Tanis     | Chase    | tanischase@gmail.com  | 0746436887  | London, UK  | Other  |
-      | Jack      | Phil     | jackphil@gmail.com    | 0748457664  | Leeds, UK   | Male   |
+      | firstName | lastName | email                  | phoneNumber | homeAddress    | gender |
+      | Oyin      | Odukudu  | oyinodukudu@gmail.com  | 0746473647  | Glasgow, UK    | Female |
+      | Tanis     | Chase    | tanischase@gmail.com   | 0746436887  | London, UK     | Other  |
+      | Jack      | Phil     | jackphil@gmail.com     | 0748457664  | Leeds, UK      | Male   |
+      | Jackson   | Jones    | jacksonjones@gmail.com | 0748678664  | Manchester, UK | Male   |
 
   @regression @invalid
   Scenario: Invalid Registration
@@ -44,6 +45,6 @@ Feature: Student Registration Form
     And the user enters address "Glasgow, UK"
     And the user selects a state
     And the user selects a city
-
     When the user clicks the submit button
+#    Then the form is not submitted
 #    Then the form is not submitted

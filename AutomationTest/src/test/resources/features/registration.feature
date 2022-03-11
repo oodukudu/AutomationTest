@@ -47,4 +47,3 @@ Feature: Student Registration Form
     And the user selects a city
     When the user clicks the submit button
 #    Then the form is not submitted
-#    Then the form is not submitted

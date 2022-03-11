@@ -1,20 +1,15 @@
 package pageObject;
 
-import cucumber.api.java.eo.Se;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-import java.util.ArrayList;
-
 public class registrationPage {
 
-    WebDriver webDriver;
+//    WebDriver webDriver;
 
     public registrationPage(WebDriver driver) {
         PageFactory.initElements(driver, this);

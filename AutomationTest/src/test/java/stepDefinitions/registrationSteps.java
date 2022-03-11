@@ -1,40 +1,42 @@
 package stepDefinitions;
 
-import cucumber.api.PendingException;
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
-import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import pageObject.registrationPage;
+import static stepDefinitions.Hooks.driver;
 
 import java.util.ArrayList;
 
 public class registrationSteps {
 
-    WebDriver driver;
+//    public static WebDriver driver = Hooks.driver;
+//    WebDriver driver;
 
     public registrationPage registrationPage;
 
-    @Before
-    public void browserSetup() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://www.toolsqa.com");
+    public registrationSteps() {
         registrationPage = new registrationPage(driver);
     }
 
-    @After
-    public void tearDown() {
+//    @Before
+//    public void browserSetup() {
+//        WebDriverManager.chromedriver().setup();
+//        driver = new ChromeDriver();
+//        driver.manage().window().maximize();
+//        driver.get("https://www.toolsqa.com");
+//        registrationPage = new registrationPage(driver);
+//    }
+//
+//    @After
+//    public void tearDown() {
 //        driver.close();
 //        driver.quit();
-    }
+//    }
 
     @Given("^the user navigates to the website$")
     public void theUserNavigatesToTheWebsite() {
@@ -44,6 +46,7 @@ public class registrationSteps {
 //        driver.manage().window().maximize();
 //        driver.findElement(By.xpath("//*[@id=\"accept-cookie-policy\"]")).click();
 
+//        registrationPage = new registrationPage(driver);
         registrationPage.clickCookieButton();
     }
 
